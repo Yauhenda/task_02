@@ -19,21 +19,6 @@ public class Word implements LeafWord{
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Word word1 = (Word) o;
-        return Objects.equals(previousElement, word1.previousElement) &&
-                Objects.equals(word, word1.word) &&
-                Objects.equals(nextElement, word1.nextElement);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(previousElement, word, nextElement);
-    }
-
-    @Override
     public String toString() {
         return previousElement +  word  + nextElement;
     }

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Sentense implements CompositeWord{
+    public static int wordsCounter;
     private List<LeafWord> words;
 
     @Override
@@ -25,22 +26,10 @@ public class Sentense implements CompositeWord{
     public String getData() {
         StringBuilder res = new StringBuilder();
         for (LeafWord word : words) {
+            wordsCounter++;
             res.append(word.getData()).append(" ");
         }
         return res.toString();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Sentense sentense = (Sentense) o;
-        return Objects.equals(words, sentense.words);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(words);
     }
 
     @Override

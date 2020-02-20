@@ -37,8 +37,8 @@ public class TextService {
 
             String a = String.valueOf(stringText.charAt(start));
             if (a.equals(" ")) {
-                result.append(stringText.substring(start + 1, end)).append("\n");
-            } else result.append(stringText.substring(start, end)).append("\n");
+                result.append(stringText, start + 1, end).append("\n");
+            } else result.append(stringText, start, end).append("\n");
 
         }
         if (String.valueOf(result.charAt(result.length() - 1)).equals("\n")){
