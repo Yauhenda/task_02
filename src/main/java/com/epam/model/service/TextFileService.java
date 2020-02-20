@@ -3,6 +3,7 @@ package com.epam.model.service;
 import com.epam.model.entity.TextInfoHolder;
 
 import java.io.*;
+import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -10,13 +11,12 @@ import com.epam.model.entity.TextInfoHolder.Builder;
 
 public class TextFileService {
     private final static String TEXT_FILE = "src/data.txt";
-    private final static String WORD_COUNT_REGEX = "\\s+";
-    private final static String SENTENCE_COUNT_REGEX = "[.?!]{1}\\s";
-    private final static String PARAGRAPH_COUNT_REGEX = "[^+\\s{4}][\\n+\\s{4}]";
+    private final static String SENTENCE_COUNT_REGEX = "[.]\\s";
+    private final static String PARAGRAPH_COUNT_REGEX = "[\\s]{4}";
     private static Builder builder;
     private static StringBuilder text = new StringBuilder();
     private static char[] symbols;
-    private static String[] words;
+    private static StringTokenizer words;
 
     public static TextInfoHolder createInfoHolder() {
         builder = new TextInfoHolder.Builder();
@@ -70,15 +70,16 @@ public class TextFileService {
     }
 
     private static void initWordCount() {
-        words = text.toString().split(WORD_COUNT_REGEX);
-        int wordCount = words.length;
+        words = new StringTokenizer(text.toString());
+        int wordCount = words.countTokens();
         builder.setWordCount(wordCount);
     }
 
     private static void findLongestWord() {
         String longestWord = "";
         int maxWordLength = 0;
-        for (String word : words) {
+        while (words.hasMoreTokens()) {
+            String word = words.nextToken();
             if (word.length() > maxWordLength) {
                 maxWordLength = word.length();
                 longestWord = word;
