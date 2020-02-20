@@ -1,9 +1,8 @@
-package com.epam.model;
+package com.epam.model.data;
 
 import com.epam.model.entity.TextInfoHolder;
 
-interface BaseModel {
-
+public interface BaseModel {
     TextInfoHolder getInstance();
 
     int getParagraphCountInfo();

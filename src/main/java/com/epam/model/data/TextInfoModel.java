@@ -1,12 +1,10 @@
 package com.epam.model.data;
 
-import com.epam.model.data.BaseModel;
 import com.epam.model.entity.TextInfoHolder;
 import com.epam.model.service.TextFileService;
 
-public class ModelImp implements BaseModel {
+public class TextInfoModel implements BaseModel {
     private TextInfoHolder textInfoHolder;
-
 
     @Override
     public TextInfoHolder getInstance() {

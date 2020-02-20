@@ -1,4 +1,4 @@
-package com.epam.data.entity;
+package com.epam.model.entity;
 
 public class TextInfoHolder {
     private int symbolCount;

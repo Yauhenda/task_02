@@ -1,1 +1,14 @@
 /out/production/task_02/com/epam/model/data/BaseModel.class
+/out/production/task_02/com/epam/controller/Controller.class
+/out/production/task_02/com/epam/Main.class
+/out/production/task_02/com/epam/view/View.class
+/out/production/task_02/com/epam/model/entity/TextInfoHolder$Builder.class
+/out/production/task_02/com/epam/model/entity/TextInfoHolder.class
+/out/production/task_02/com/epam/model/data/TextInfoModel.class
+/out/production/task_02/META-INF/task_02.kotlin_module
+/out/production/task_02/com/epam/model/service/TextFileService.class
+/.idea/uiDesigner.xml
+/.idea/vcs.xml
+/.idea/task_02.iml
+/.idea/modules.xml
+/.idea/.gitignore
