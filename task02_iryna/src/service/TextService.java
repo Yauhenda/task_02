@@ -1,7 +1,6 @@
 package service;
 
 import dao.CompositeWord;
-import dao.Text;
 import service.parser.ParagraphParser;
 import service.parser.ParserChain;
 import service.parser.SentenseParser;
@@ -22,7 +21,7 @@ public class TextService {
                 .linkWith(new ParagraphParser())
                 .linkWith(new TextParser());
 
-        text = (Text) componentParser.parseLine(stringText);
+        text = (CompositeWord) componentParser.parseLine(stringText);
     }
 
     public String print() {

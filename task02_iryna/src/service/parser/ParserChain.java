@@ -3,7 +3,7 @@ package service.parser;
 import dao.LeafWord;
 
 public interface ParserChain {
-    LeafWord parseLine(String string);
+   LeafWord parseLine(String string);
 
-    ParserChain linkWith( ParserChain next);
+   ParserChain linkWith( ParserChain next);
 }

@@ -2,7 +2,6 @@ package dao;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Paragraph implements CompositeWord{
 
@@ -17,11 +16,6 @@ public class Paragraph implements CompositeWord{
 
     public Paragraph(){
         this.sentenses = new ArrayList<>();
-    }
-
-    @Override
-    public List<LeafWord> getWords() {
-        return sentenses;
     }
 
     @Override

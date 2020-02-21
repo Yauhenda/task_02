@@ -17,11 +17,6 @@ public class Text implements CompositeWord{
     }
 
     @Override
-    public List<LeafWord> getWords() {
-        return paragraphs;
-    }
-
-    @Override
     public String getData() {
         StringBuilder res = new StringBuilder();
         for (int i = 0; i < paragraphs.size(); i++){

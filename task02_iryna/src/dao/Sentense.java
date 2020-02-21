@@ -2,7 +2,6 @@ package dao;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Sentense implements CompositeWord{
     public static int wordsCounter;
@@ -15,11 +14,6 @@ public class Sentense implements CompositeWord{
 
     public Sentense(){
         this.words = new ArrayList<>();
-    }
-
-    @Override
-    public List<LeafWord> getWords() {
-        return words;
     }
 
     @Override

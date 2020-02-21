@@ -1,6 +1,5 @@
 package dao;
 
-import java.util.Objects;
 
 public class Word implements LeafWord{
     private String previousElement = "";
