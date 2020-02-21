@@ -9,13 +9,13 @@ public class Paragraph implements CompositeWord{
 
     private List<LeafWord> sentenses;
 
-    @Override
-    public void add(LeafWord leaf) {
-        sentenses.add( leaf);
-    }
-
     public Paragraph(){
         this.sentenses = new ArrayList<>();
+    }
+
+    @Override
+    public void add(LeafWord leaf) {
+        sentenses.add(leaf);
     }
 
     @Override
