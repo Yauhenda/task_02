@@ -10,6 +10,7 @@ public class Text implements CompositeWord{
     @Override
     public void add(LeafWord leaf) {
         paragraphs.add(leaf);
+        Text.paragraphsCounter++;
     }
 
     public Text(){
@@ -20,7 +21,6 @@ public class Text implements CompositeWord{
     public String getData() {
         StringBuilder res = new StringBuilder();
         for (int i = 0; i < paragraphs.size(); i++){
-            paragraphsCounter++;
             if (i == 0) {
                 res.append("\t").append(paragraphs.get(i).getData());
             } else res.append("\n" + "\t").append(paragraphs.get(i).getData());

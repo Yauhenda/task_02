@@ -9,11 +9,11 @@ import java.util.List;
 
 public class ParagraphParser extends AbstractParser {
 
-    private static final String SENTENSE_SPLIT_REGEX = "[\\.][\\s]";
+    private static final String SENTENCE_SPLIT_REGEX = "[\\.][\\s]";
 
     @Override
     public LeafWord parseLine(String string) {
-        List<String> stringSentences = Arrays.asList(string.split(SENTENSE_SPLIT_REGEX));
+        List<String> stringSentences = Arrays.asList(string.split(SENTENCE_SPLIT_REGEX));
         CompositeWord paragraph = new Paragraph();
         stringSentences.forEach(o-> {
             LeafWord leafWord = nextParse(o);

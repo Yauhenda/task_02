@@ -4,33 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Paragraph implements CompositeWord{
-
-    public static int sentensesCounter;
-
-    private List<LeafWord> sentenses;
+    private List<LeafWord> sentences;
+    public static int sentencesCounter;
 
     public Paragraph(){
-        this.sentenses = new ArrayList<>();
+        this.sentences = new ArrayList<>();
+        Paragraph.sentencesCounter++;
     }
 
     @Override
     public void add(LeafWord leaf) {
-        sentenses.add(leaf);
+        sentences.add(leaf);
     }
 
     @Override
     public String getData() {
         StringBuilder res = new StringBuilder();
-        for (LeafWord sentence : sentenses) {
+        for (LeafWord sentence : sentences) {
             res.append(sentence.getData().trim()).append(". ");
-            sentensesCounter++;
         }
         return res.toString().trim();
     }
 
     @Override
     public String toString() {
-        return sentenses + "";
+        return sentences + "";
     }
 
 }

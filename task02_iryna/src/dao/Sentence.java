@@ -3,7 +3,7 @@ package dao;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sentense implements CompositeWord{
+public class Sentence implements CompositeWord{
     public static int wordsCounter;
     private List<LeafWord> words;
 
@@ -12,7 +12,7 @@ public class Sentense implements CompositeWord{
         words.add( leaf);
     }
 
-    public Sentense(){
+    public Sentence(){
         this.words = new ArrayList<>();
     }
 
@@ -20,7 +20,7 @@ public class Sentense implements CompositeWord{
     public String getData() {
         StringBuilder res = new StringBuilder();
         for (LeafWord word : words) {
-            wordsCounter++;
+            Sentence.wordsCounter++;
             res.append(word.getData()).append(" ");
         }
         return res.toString();

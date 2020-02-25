@@ -2,7 +2,7 @@ package view;
 
 import controller.TextReader;
 import dao.Paragraph;
-import dao.Sentense;
+import dao.Sentence;
 import dao.Text;
 import service.TextService;
 
@@ -19,8 +19,8 @@ public class SystemInitiator {
             System.out.println("There's something wrong");
         }
 
-        printPar();
-        printSent();
+        printParagraph();
+        printSentences();
         printWords();
     }
 
@@ -29,18 +29,18 @@ public class SystemInitiator {
         System.out.println(textService.print());
     }
 
-    public void printPar() {
+    public void printParagraph() {
         System.out.println("Number of Paragraphs: " +
                 (Text.paragraphsCounter - 1));
     }
 
-    public void printSent() {
-        System.out.println("Number of Sentenses: " +
-                (Paragraph.sentensesCounter - 1));
+    public void printSentences() {
+        System.out.println("Number of Sentences: " +
+                (Paragraph.sentencesCounter));
     }
 
     public void printWords() {
         System.out.println("Number of Words: " +
-                (Sentense.wordsCounter - 1));
+                (Sentence.wordsCounter - 1));
     }
 }

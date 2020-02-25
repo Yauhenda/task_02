@@ -6,4 +6,5 @@ public interface ParserChain {
    LeafWord parseLine(String string);
 
    ParserChain linkWith( ParserChain next);
+
 }
